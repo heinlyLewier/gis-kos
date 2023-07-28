@@ -17,7 +17,7 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2  d-lg-inline text-gray-600 small"><?= $user->nama; ?></span>
+                        <span class="mr-2  d-lg-inline text-gray-600 small"><?= $user->username; ?></span>
                         <?php if ($user->img == null) { ?>
                             <img class="img-profile rounded-circle" style="object-fit: cover;" src="<?= base_url('uploads/profil/default.jpg'); ?>" />
                         <?php } else { ?>

@@ -20,6 +20,7 @@ class Peta extends CI_Controller
     public function index()
     {
         $data = array(
+            'title'     => 'Peta',
             'content'   => 'v_peta',
             'list'      => $this->model_kos->getkos()
         );
@@ -30,6 +31,7 @@ class Peta extends CI_Controller
         $id = $this->uri->segment(3);
 
         $data = array(
+            'title'     => 'Lokasi Kos',
             'content'   => 'v_lokasi_kos',
             'list'      => $this->model_kos->detail($id)->row()
         );

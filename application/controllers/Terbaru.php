@@ -21,6 +21,7 @@ class Terbaru extends CI_Controller
         $keyword = $this->input->post('keyword');
         $data = array(
             'keyword'   => $keyword,
+            'title'     => 'Home',
             'content'   => 'v_kos_terbaru',
             'user'      => $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row(),
             'list'      => $this->model_admin->getAll(),
@@ -31,6 +32,7 @@ class Terbaru extends CI_Controller
     public function tentang()
     {
         $data = array(
+            'title'     => 'Tentang',
             'content'   => 'v_tentang_kos',
             'user'      => $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row()
         );
@@ -42,10 +44,12 @@ class Terbaru extends CI_Controller
         $id = $this->uri->segment(3);
 
         $data = array(
+            'title'     => 'Detail Kos',
+            'content'   => 'v_detail_terbaru_kos',
             'user'      => $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row(),
             'list'      => $this->model_kos->detail($id)->row()
         );
-        $this->load->view('v_detail_terbaru_kos', $data);
+        $this->load->view('layout/template_website', $data);
     }
 }
 

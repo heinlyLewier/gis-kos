@@ -2,7 +2,7 @@
     <?php if ($this->session->flashdata('pesan')) { ?>
         var isi = <?= json_encode($this->session->flashdata('pesan')) ?>;
         Swal.fire({
-            position: 'top-right',
+            position: 'center',
             icon: 'error',
             title: 'Gagal!!',
             text: isi,
