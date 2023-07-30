@@ -1,5 +1,5 @@
 <section class="about  min-vh-100 py-5" id="about">
-    <div class="row align-items-center container my-5  mx-auto">
+    <div class="row align-items-center container my-0 mx-auto">
         <div class="col-md-12">
             <a name="" id="" class="btn btn-danger btn-sm border-0 my-5 float-right mb-3 d-md-block d-none" href="<?= site_url('terbaru'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
         </div>

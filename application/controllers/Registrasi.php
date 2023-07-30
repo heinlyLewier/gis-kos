@@ -38,7 +38,7 @@ class Registrasi extends CI_Controller
             'username'  => htmlspecialchars($this->input->post('username')),
             'password'  => htmlspecialchars(password_hash($this->input->post('password'), PASSWORD_DEFAULT)),
             'level'     => 'User',
-            'status'    => 'Aktif',
+            'status'    => 'Tidak Aktif',
             'img'       => null
         );
         $this->Model_auth->save($data);

@@ -3,30 +3,26 @@
         <a name="" id="" class="btn btn-primary border-0 btn-sm float-right mb-3" style="background-color: #298505;" href="<?= site_url('terbaru'); ?>" role="button"> <i class="fas fa-external-link-alt"></i> Lihat Website</a>
     </div>
 </div>
-<div class="row">
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card row border-0 h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Jumlah Kos
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $list->num_rows(); ?>
-                        </div>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card row border-0 h-100 py-2 border-left-success border-bottom-0 border-top-0 border-right-0">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                        Jumlah Kos
                     </div>
-                    <div class="col-auto">
-                        <i class="fas fa-home fa-2x text-gray-300"></i>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <?= $list->num_rows(); ?>
                     </div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-home fa-2x text-success"></i>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="card mb-4 border-0" style="min-height: 62vh;">
-    <div class="card-body" id="map"></div>
-</div>
+<div class="card mb-4 border-0" style="min-height: 50vh;" id="map"></div>
 <script>
     <?php if ($list->num_rows() > 0) { ?>
         //map view

@@ -105,47 +105,27 @@
 						<a name="" id="" class="nav-link d-block" href="<?= site_url('terbaru'); ?>" role="button">-> Lihat Semua <- </a>
 					</div>
 					<?php foreach ($list->result() as $key => $value) { ?>
-						<div class="col-md-3">
-							<div class="card m-2 border-0 shadow-sm">
-								<div class=" card-body p-2">
+						<a name="" id="" class="nav-link" href="<?= site_url('terbaru/detail/' . $value->id_kos); ?>" role="button">
+							<div class="col-md-3">
+								<div class="card m-0 border-0 shadow-sm text-center" style=" height: 25rem;">
 									<?php if ($value->gambar1 != null) { ?>
 										<img class="img-fluid mb-2" src="<?= base_url('uploads/kos/' . $value->gambar1); ?>" style="object-fit: cover; width: 100%; height: 170px;" alt="">
 									<?php } else { ?>
 										<img class="img-fluid mb-2" src="<?= base_url('uploads/kos/default.jpg'); ?>" style="object-fit: cover; width: 100%; height: 170px;" alt="">
 									<?php } ?>
-									<table class="table table-borderless table-sm text-left">
-										<tbody>
-											<tr class="font-weight-bold">
-												<td>Nama Kos</td>
-												<td>:</td>
-												<td><?= $value->nama_kos; ?></td>
-											</tr>
-											<tr>
-												<td>Alamat Kos</td>
-												<td>:</td>
-												<td><?= $value->alamat_kos; ?></td>
-											</tr>
-											<tr>
-												<td>Kecamatan</td>
-												<td>:</td>
-												<td><?= $value->kecamatan; ?></td>
-											</tr>
-											<tr>
-												<td>Sisa Kamar</td>
-												<td>:</td>
-												<td><?= $value->sisa_kamar; ?></td>
-											</tr>
-										</tbody>
-									</table>
-									<hr>
-									<div class="btn-group" role="group" aria-label="Basic example">
-										<a name="" id="" class="btn btn-sm btn-primary border-0" href="<?= site_url('peta/lokasi/' . $value->id_kos); ?>" role="button"><i class="fas fa-route"></i> Lihat Lokasi</a>
-										<a name="" id="" class="btn btn-warning btn-sm" href="<?= site_url('terbaru/detail/' . $value->id_kos); ?>" role="button"><i class="fa fa-eye" aria-hidden="true"></i> Detail</a>
-										<a name="" id="" class="btn btn-sm btn-success border-0" href="http:///api.whatsapp.com/send?phone=<?= $value->no_wa; ?>&text=Halo%20Admin,%20Saya%20Mau%20Pesan%20Kamar." role="button" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+									<p>
+										<span class="h5"><?= $value->nama_kos; ?></span><br>
+										<span class="text-black-50" style="font-size: 2vh;"><?= $value->alamat_kos; ?>, <?= $value->kecamatan; ?></span><br>
+										<span class="text-black-50 font-weight-bold" style="font-size: 15px;">Sisa Kamar : <?= $value->sisa_kamar; ?></span>
+									</p>
+									<hr class="mb-0">
+									<div class="btn-group-sm text-center" role="group" aria-label="Basic example">
+										<a name="" id="" class="btn btn-sm btn-primary border-0" href="<?= site_url('peta/lokasi/' . $value->id_kos); ?>" role="button"><i class="fas fa-route"></i> Lokasi</a>
+										<a name="" id="" class="btn btn-sm btn-success border-0" style="background-color: #298505;" href="http:///api.whatsapp.com/send?phone=<?= $value->no_wa; ?>&text=Halo%20Admin,%20Saya%20Mau%20Pesan%20Kamar." role="button" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
 									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					<?php } ?>
 				<?php } else { ?>
 					Tidak ada data
@@ -178,8 +158,8 @@
 		<!-- Copyright -->
 	</footer>
 
-	<script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/jquery.slim.min.js"></script>
-	<script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
+	<script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

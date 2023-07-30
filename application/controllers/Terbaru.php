@@ -29,15 +29,6 @@ class Terbaru extends CI_Controller
         );
         $this->load->view('layout/template_website', $data);
     }
-    public function tentang()
-    {
-        $data = array(
-            'title'     => 'Tentang',
-            'content'   => 'v_tentang_kos',
-            'user'      => $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row()
-        );
-        $this->load->view('layout/template_website', $data);
-    }
 
     public function detail()
     {

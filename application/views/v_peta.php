@@ -1,4 +1,4 @@
-<div class="card min-vh-100 border-0 mb-0" style="margin-top: 50px;">
+<div class="card min-vh-100 border-0 mb-0" style="margin-top: 55px;">
     <div class="card-body" id="map"></div>
 </div>
 <script>

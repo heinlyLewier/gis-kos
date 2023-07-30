@@ -14,7 +14,7 @@ box-shadow: 2px 0px 5px #000;
 z-index: 100;" href="<?= site_url('terbaru'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true" style="margin-top: 16px;"></i></a>
     </div>
 </div>
-<div class="card min-vh-100 border-0" style="margin-top: 50px;">
+<div class="card min-vh-100 border-0" style="margin-top: 55px;">
     <div class="card-body" id="map"></div>
 </div>
 <script>

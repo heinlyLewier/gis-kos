@@ -46,7 +46,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand d-none d-lg-block" href="<?= site_url('terbaru'); ?>">GIS-KOS</a>
+                <a class="navbar-brand d-none d-lg-block" href="<?= site_url('./'); ?>">GIS-KOS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,12 +59,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= site_url('peta'); ?>">Peta</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= site_url('terbaru/tentang'); ?>">Tentang</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= site_url('home'); ?>">Dashboard</a>
-                        </li>
+                        <?php if ($this->session->userdata('level') == 'User') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= site_url('home'); ?>">Dashboard</a>
+                            </li>
+                        <?php } ?>
+                        <?php if ($this->session->userdata('level') == 'Admin') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= site_url('admin'); ?>">Dashboard</a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <a class="nav-link text-warning logout" href="<?= site_url('auth/logout'); ?>"><i class="fas fa-sign-out-alt"></i> Logout</a>

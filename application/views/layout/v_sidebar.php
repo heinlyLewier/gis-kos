@@ -43,7 +43,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url('admin/kos'); ?>">
                         <i class="fas fa-fw fa-home"></i>
-                        <span>Data Master</span></a>
+                        <span>Data Kos</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url('admin/user'); ?>">
