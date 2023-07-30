@@ -138,7 +138,7 @@
 										</tbody>
 									</table>
 									<hr>
-									<a name="" id="" class="btn btn-sm btn-primary border-0" href="<?= site_url('peta/lokasi/' . $value->id_kos); ?>" role="button"><i class="fas fa-route"></i> Lihat Lokasi</a>
+									<a name="" id="" class="btn btn-sm btn-primary border-0" href="<?= site_url('peta/lokasi/' . $value->id_kos); ?>" role="button"><i class="fas fa-route"></i> Lokasi</a>
 									<a name="" id="" class="btn btn-warning btn-sm" href="<?= site_url('terbaru/detail/' . $value->id_kos); ?>" role="button"><i class="fa fa-eye" aria-hidden="true"></i> Detail</a>
 									<a name="" id="" class="btn btn-sm btn-success border-0" href="http:///api.whatsapp.com/send?phone=<?= $value->no_wa; ?>&text=Halo%20Admin,%20Saya%20Mau%20Pesan%20Kamar." role="button" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
 								</div>
