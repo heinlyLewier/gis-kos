@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jul 2023 pada 19.12
+-- Waktu pembuatan: 31 Jul 2023 pada 12.09
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -75,7 +75,7 @@ CREATE TABLE `tb_users` (
 --
 
 INSERT INTO `tb_users` (`id_user`, `nama`, `username`, `password`, `level`, `status`, `img`) VALUES
-(17, 'Armando Heinly Lewier', 'admin', '$2y$10$PSTfxaaQDIi.fxOK3nkh1.MRuF4FvXKyUOvRQ3VKRITC8SsytAoSW', 'Admin', 'Tidak Aktif', 'profil-230730-38cd3df266.jpg');
+(17, 'Armando Heinly Lewier', 'admin', '$2y$10$1VqOHVr0PF.SRSkZIZ3YH.3f/oL19VLFAF77WFZZwNubZ.VvTHht.', 'Admin', 'Tidak Aktif', 'profil-230731-817f4b4dee.jpg');
 
 --
 -- Indexes for dumped tables
@@ -102,13 +102,13 @@ ALTER TABLE `tb_users`
 -- AUTO_INCREMENT untuk tabel `tb_kos`
 --
 ALTER TABLE `tb_kos`
-  MODIFY `id_kos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id_kos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
