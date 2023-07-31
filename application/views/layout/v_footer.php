@@ -1,10 +1,12 @@
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Skripsi GIS Pemetaan Rumah Kos 2023 - <?= date('Y'); ?></span>
-        </div>
-    </div>
+	<div class="container my-auto">
+		<div class="copyright text-center my-auto">
+			<span>Copyright &copy; Skripsi GIS Pemetaan Rumah Kos 2023 -
+				<?= date('Y'); ?>
+			</span>
+		</div>
+	</div>
 </footer>
 <!-- End of Footer -->
 </div>
@@ -14,7 +16,7 @@
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+	<i class="fas fa-angle-up"></i>
 </a>
 
 <!-- Bootstrap core JavaScript-->
@@ -38,55 +40,76 @@
 </html>
 
 <script>
-    $('.logout').on('click', function() {
-        var getLink = $(this).attr('href');
-        Swal.fire({
-            text: "Yakin ingin keluar?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            confirmButtonText: 'Yes',
-            cancelButtonColor: '#3085d6',
-            cancelButtonText: "Batal"
+	$('.logout').on('click', function () {
+		var getLink = $(this).attr('href');
+		Swal.fire({
+			text: "Yakin ingin keluar?",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#d33',
+			confirmButtonText: 'Yes',
+			cancelButtonColor: '#3085d6',
+			cancelButtonText: "Batal"
 
-        }).then(result => {
-            //jika klik ya maka arahkan ke proses.php
-            if (result.isConfirmed) {
-                window.location.href = getLink
-            }
-        })
-        return false;
-    });
+		}).then(result => {
+			//jika klik ya maka arahkan ke proses.php
+			if (result.isConfirmed) {
+				window.location.href = getLink
+			}
+		})
+		return false;
+	});
 </script>
 <script>
-    $('.alert_notif').on('click', function() {
-        var getLink = $(this).attr('href');
-        Swal.fire({
-            text: "Yakin hapus data?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            confirmButtonText: 'Yes',
-            cancelButtonColor: '#3085d6',
-            cancelButtonText: "Batal"
+	$('.alert_notif').on('click', function () {
+		var getLink = $(this).attr('href');
+		Swal.fire({
+			text: "Yakin hapus data?",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#d33',
+			confirmButtonText: 'Yes',
+			cancelButtonColor: '#3085d6',
+			cancelButtonText: "Batal"
 
-        }).then(result => {
-            //jika klik ya maka arahkan ke proses.php
-            if (result.isConfirmed) {
-                window.location.href = getLink
-            }
-        })
-        return false;
-    });
+		}).then(result => {
+			//jika klik ya maka arahkan ke proses.php
+			if (result.isConfirmed) {
+				window.location.href = getLink
+			}
+		})
+		return false;
+	});
+</script>
+<script>
+	$('.hapus_user').on('click', function () {
+		var getLink = $(this).attr('href');
+		Swal.fire({
+			text: "Yakin hapus user?",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#d33',
+			confirmButtonText: 'Yes',
+			cancelButtonColor: '#3085d6',
+			cancelButtonText: "Batal"
+
+		}).then(result => {
+			//jika klik ya maka arahkan ke proses.php
+			if (result.isConfirmed) {
+				window.location.href = getLink
+			}
+		})
+		return false;
+	});
 </script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.show-password').click(function() {
-            if ($(this).is(':checked')) {
-                $('.form-password').attr('type', 'text');
-            } else {
-                $('.form-password').attr('type', 'password');
-            }
-        });
-    });
+	$(document).ready(function () {
+		$('.show-password').click(function () {
+			if ($(this).is(':checked')) {
+				$('.form-password').attr('type', 'text');
+			} else {
+				$('.form-password').attr('type', 'password');
+			}
+		});
+	});
 </script>
