@@ -40,7 +40,7 @@
 </html>
 
 <script>
-	$('.logout').on('click', function () {
+	$('.logout').on('click', function() {
 		var getLink = $(this).attr('href');
 		Swal.fire({
 			text: "Yakin ingin keluar?",
@@ -61,7 +61,7 @@
 	});
 </script>
 <script>
-	$('.alert_notif').on('click', function () {
+	$('.alert_notif').on('click', function() {
 		var getLink = $(this).attr('href');
 		Swal.fire({
 			text: "Yakin hapus data?",
@@ -82,7 +82,7 @@
 	});
 </script>
 <script>
-	$('.hapus_user').on('click', function () {
+	$('.hapus_user').on('click', function() {
 		var getLink = $(this).attr('href');
 		Swal.fire({
 			text: "Yakin hapus user?",
@@ -103,8 +103,8 @@
 	});
 </script>
 <script type="text/javascript">
-	$(document).ready(function () {
-		$('.show-password').click(function () {
+	$(document).ready(function() {
+		$('.show-password').click(function() {
 			if ($(this).is(':checked')) {
 				$('.form-password').attr('type', 'text');
 			} else {
