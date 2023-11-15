@@ -8,10 +8,10 @@ class Terbaru extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if ($this->session->userdata('security') !== 'Login') {
-            $this->session->set_flashdata('gagal', 'Silahkan login terlebih dahulu.');
-            redirect(site_url() . 'welcome');
-        }
+        // if ($this->session->userdata('security') !== 'Login') {
+        //     $this->session->set_flashdata('gagal', 'Silahkan login terlebih dahulu.');
+        //     redirect(site_url() . 'welcome');
+        // }
         $this->load->model('Model_admin', 'model_admin');
         $this->load->model('Model_kos', 'model_kos');
     }
@@ -35,7 +35,7 @@ class Terbaru extends CI_Controller
         $id = $this->uri->segment(3);
 
         $data = array(
-            'title'     => 'Detail Kos',
+            'title'     => 'Home',
             'content'   => 'v_detail_terbaru_kos',
             'user'      => $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row(),
             'list'      => $this->model_kos->detail($id)->row()

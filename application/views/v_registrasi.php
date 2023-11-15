@@ -49,7 +49,12 @@
 
                     <div class="form-group mt-3 text-center">
                         <button type="submit" class="btn btn-success border-0 btn-sm btn-block" style="background-color: #298505;">Daftar</button>
-                        <a name="" id="" class="nav-link " href="<?= site_url('auth'); ?>" role="button">Sudah memeiliki sebuah akun? Login!</a>
+                        <?php if ($this->session->userdata('security') !== 'Login') : ?>
+                            <a name="" id="" class="nav-link " href="<?= site_url('auth'); ?>" role="button">Sudah memeiliki sebuah akun? Login!</a>
+                        <?php endif; ?>
+                        <?php if ($this->session->userdata('security') == 'Login') : ?>
+                            <a name="" id="" class="nav-link " href="<?= site_url('admin/user'); ?>" role="button">Kembali</a>
+                        <?php endif; ?>
                     </div>
                     <?= form_close(); ?>
 

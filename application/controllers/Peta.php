@@ -9,10 +9,10 @@ class Peta extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if ($this->session->userdata('security') !== 'Login') {
-            $this->session->set_flashdata('gagal', 'Silahkan login terlebih dahulu.');
-            redirect(site_url() . 'welcome');
-        }
+        // if ($this->session->userdata('security') !== 'Login') {
+        //     $this->session->set_flashdata('gagal', 'Silahkan login terlebih dahulu.');
+        //     redirect(site_url() . 'welcome');
+        // }
         $this->load->model('Model_kos', 'model_kos');
     }
 
@@ -31,7 +31,7 @@ class Peta extends CI_Controller
         $id = $this->uri->segment(3);
 
         $data = array(
-            'title'     => 'Lokasi Kos',
+            'title'     => 'Peta',
             'content'   => 'v_lokasi_kos',
             'list'      => $this->model_kos->detail($id)->row()
         );

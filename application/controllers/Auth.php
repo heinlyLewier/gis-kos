@@ -40,6 +40,7 @@ class Auth extends CI_Controller
 						'username' => $query->username,
 						'id_user' => $query->id_user,
 						'level' => $query->level,
+						'status'	=> $query->status,
 						'security' => 'Login'
 					);
 					$this->session->set_userdata($data);

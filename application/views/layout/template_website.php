@@ -54,10 +54,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= site_url('terbaru'); ?>">Home</a>
+                            <a class="nav-link <?= ($title == 'Home') ? 'text-warning' : ''; ?>" href="<?= site_url('terbaru'); ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= site_url('peta'); ?>">Peta</a>
+                            <a class="nav-link <?= ($title == 'Peta') ? 'text-warning' : ''; ?>" href="<?= site_url('peta'); ?>">Peta</a>
                         </li>
                         <?php if ($this->session->userdata('level') == 'User') { ?>
                             <li class="nav-item">
@@ -71,7 +71,9 @@
                         <?php } ?>
                     </ul>
                 </div>
-                <a class="nav-link text-warning logout" href="<?= site_url('auth/logout'); ?>"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <?php if ($this->session->userdata('security') === 'Login') : ?>
+                    <a class="nav-link text-warning logout" href="<?= site_url('auth/logout'); ?>"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>

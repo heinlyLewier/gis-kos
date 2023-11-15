@@ -49,20 +49,20 @@
 									</td>
 									<td style="width: 15rem;" class="text-center">
 										<?php if ($value->img != null) { ?>
-											<img class="img-thumbnail" src="<?= base_url('uploads/profil/' . $value->img); ?>"
-												width="100px" height="100px" style="object-fit: cover;" alt="">
+											<img class="img-thumbnail" src="<?= base_url('uploads/profil/' . $value->img); ?>" width="100px" height="100px" style="object-fit: cover;" alt="">
 										<?php } else { ?>
-											<img class="img-thumbnail" src="<?= base_url('uploads/profil/default.jpg'); ?>"
-												width="100px" height="100px" style="object-fit: cover;" alt="">
+											<img class="img-thumbnail" src="<?= base_url('uploads/profil/default.jpg'); ?>" width="100px" height="100px" style="object-fit: cover;" alt="">
 										<?php } ?>
 									</td>
 									<td class="text-center">
 										<div class="btn-group btn-group-sm border-0" role="group" aria-label="b">
 
-											<a name="" id="" class="btn btn-danger hapus_user"
-												href="<?= site_url('admin/delete_user/') . $value->id_user . '/' . $value->img; ?>"
-												role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
-
+											<?php if ($value->status == 'Tidak Aktif') : ?>
+												<a name="" id="" class="btn btn-danger hapus_user" href="<?= site_url('admin/delete_user/') . $value->id_user . '/' . $value->img; ?>" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
+											<?php endif; ?>
+											<?php if ($value->status == 'Aktif') : ?>
+												<i class="far fa-times-circle text-black-50 fa-1x"></i>
+											<?php endif; ?>
 										</div>
 									</td>
 								</tr>

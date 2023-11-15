@@ -8,16 +8,19 @@ class Admin extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+
 		if ($this->session->userdata('security') !== 'Login') {
-			$this->session->set_flashdata('gagal', 'Silahkan login terlebih dahulu.');
+			$this->session->set_flashdata('gagal', 'Silahkan Login Terlebih dahulu.');
 			redirect(site_url() . 'welcome');
 		}
+
 		$this->load->model('Model_admin', 'model_admin');
 		$this->load->model('Model_auth', 'model_auth');
 	}
 
 	public function index()
 	{
+
 		$data = array(
 			'title' => 'Dashboard',
 			'content' => 'admin/v_dashboard',
@@ -64,7 +67,6 @@ class Admin extends CI_Controller
 
 	public function delete_user()
 	{
-
 		$id = $this->uri->segment(3);
 		$gambar = $this->uri->segment(4);
 		$target_file = './uploads/profil/' . $gambar;
@@ -74,7 +76,6 @@ class Admin extends CI_Controller
 		$this->session->set_flashdata('pesan', 'Data user berhasil dihapus.');
 		redirect(site_url('admin/user'));
 	}
-
 }
 
 /* End of file Admin.php */
