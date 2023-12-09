@@ -1,11 +1,11 @@
 <div class="row">
     <?php if ($user->level == 'Admin') { ?>
         <div class="col">
-            <a name="" id="" class="btn btn-danger btn-sm border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('admin/kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
+            <a name="" id="" class="btn btn-danger btn-md border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('admin/kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
         </div>
     <?php } elseif ($user->level == 'User') { ?>
         <div class="col">
-            <a name="" id="" class="btn btn-danger btn-sm border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
+            <a name="" id="" class="btn btn-danger btn-md border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
         </div>
     <?php } ?>
 </div>
