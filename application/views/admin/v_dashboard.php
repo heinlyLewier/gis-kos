@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col">
-        <a name="" id="" class="btn btn-primary border-0 btn-sm float-right mb-3" style="background-color: #298505;" href="<?= site_url('terbaru'); ?>" role="button"> <i class="fas fa-external-link-alt"></i> Lihat Website</a>
+        <a name="" id="" class="btn btn-primary border-0 btn-md float-right mb-3" style="background-color: #298505;" href="<?= site_url('terbaru'); ?>" role="button"> <i class="fas fa-external-link-alt"></i> Lihat Website</a>
     </div>
 </div>
 <div class="row mx-auto">

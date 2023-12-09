@@ -13,7 +13,7 @@
 </script>
 <div class="card border-0 mb-4">
     <div class="card-body">
-        <a name="" id="" class="btn btn-primary btn-sm border-0 float-right mb-3" href="<?= site_url('kos/add'); ?>" role="button" style="background-color:#298505;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Kos</a>
+        <a name="" id="" class="btn btn-primary btn-md border-0 float-right mb-3" href="<?= site_url('kos/add'); ?>" role="button" style="background-color:#298505;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Kos</a>
 
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable">

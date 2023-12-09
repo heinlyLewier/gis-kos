@@ -26,18 +26,18 @@
 
                     <div class="form-group">
                         <label for="my-input">Username</label>
-                        <input id="my-input" class="form-control" type="text" name="username" value="<?= set_value('username'); ?>" placeholder="Username" autocomplete="off">
+                        <input id="my-input" class="form-control" type="text" name="username" value="<?= set_value('username'); ?>" placeholder="Username" autocomplete="off" required>
                         <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="my-input">Password</label>
-                            <input id="" class="form-control form-password" type="password" name="password" value="" placeholder="Password" autocomplete="off">
+                            <input id="" class="form-control form-password" type="password" name="password" value="" placeholder="Password" autocomplete="off" required>
                             <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="my-input">Konfirmasi Password</label>
-                            <input id="" class="form-control form-password" type="password" name="konfir_password" value="" placeholder="Konfirmasi password" autocomplete="off">
+                            <input id="" class="form-control form-password" type="password" name="konfir_password" value="" placeholder="Konfirmasi password" autocomplete="off" required>
                         </div>
                     </div>
                     <div class=" form-group form-check mb-3">
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group mt-3 text-center">
-                        <button type="submit" class="btn btn-success border-0 btn-sm btn-block" style="background-color: #298505;">Daftar</button>
+                        <button type="submit" class="btn btn-success border-0 btn-md btn-block" style="background-color: #298505;">Daftar</button>
                         <?php if ($this->session->userdata('security') !== 'Login') : ?>
                             <a name="" id="" class="nav-link " href="<?= site_url('auth'); ?>" role="button">Sudah memeiliki sebuah akun? Login!</a>
                         <?php endif; ?>

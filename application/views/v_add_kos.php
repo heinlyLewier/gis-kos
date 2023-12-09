@@ -27,11 +27,11 @@
 <div class="row">
     <?php if ($user->level == 'Admin') { ?>
         <div class="col">
-            <a name="" id="" class="btn btn-danger btn-sm border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('admin/kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
+            <a name="" id="" class="btn btn-danger btn-md border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('admin/kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
         </div>
     <?php } elseif ($user->level == 'User') { ?>
         <div class="col">
-            <a name="" id="" class="btn btn-danger btn-sm border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
+            <a name="" id="" class="btn btn-danger btn-md border-0 float-right mb-3 d-md-block d-none" href="<?= site_url('kos'); ?>" role="button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali</a>
         </div>
     <?php } ?>
 </div>
@@ -195,7 +195,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-sm border-0" style="background-color:#298505 ;">Simpan</button>
+                    <button type="submit" class="btn btn-success btn-md border-0" style="background-color:#298505 ;">Simpan</button>
                 </div>
             </div>
         </div>
@@ -362,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-sm border-0" style="background-color:#298505 ;">Simpan</button>
+                    <button type="submit" class="btn btn-success btn-md border-0" style="background-color:#298505 ;">Simpan</button>
                 </div>
             </div>
         </div>

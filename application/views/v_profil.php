@@ -46,7 +46,7 @@
                 </div>
                 <hr>
                 <div class="form-group">
-                    <button type="submit" name="btn-ubahuser" class="btn btn-sm btn-primary border-0" style="background-color:#298505;">Update profil</button>
+                    <button type="submit" name="btn-ubahuser" class="btn btn-md btn-primary border-0" style="background-color:#298505;">Update profil</button>
                 </div>
                 <?= form_close(); ?>
             </div>
@@ -79,7 +79,7 @@
                 </div>
                 <hr>
                 <div class="form-group">
-                    <button type="submit" name="btn-ubahpass" class="btn  btn-sm btn-primary border-0" style="background-color:#298505;">Update password</button>
+                    <button type="submit" name="btn-ubahpass" class="btn  btn-md btn-primary border-0" style="background-color:#298505;">Update password</button>
                 </div>
                 <?= form_close(); ?>
             </div>
